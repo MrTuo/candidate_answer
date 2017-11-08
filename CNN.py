@@ -7,6 +7,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import random
 import torch
+from io import open
 # 一些常量
 # On windows
 # dir_train = 'D:/Github/candidate_answer/data/json_train_expt_stop'
@@ -15,7 +16,7 @@ import torch
 # On ubuntu
 dir_train = 'data/json_train_expt_stop2'
 dir_test = 'data/json_test_expt_stop'
-dir_embedding = '/home/tuomx/nlp_data/sogou_100_nobinary'
+dir_embedding = 'data/sogou_100_nobinary'
 debug = True # depend on the information to be printed or writed in log_file
 
 embedding_size = 100
