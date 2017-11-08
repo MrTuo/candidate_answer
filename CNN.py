@@ -30,12 +30,11 @@ batch_size = 8
 log_file = open('log','w',encoding='utf-8')
 def log(log_inf):
     if debug:
-        if
         print(log_inf)
     else:
         log_file.write(log_inf)
         
-#3######################## 加载词向量
+######################### 加载词向量
 embedding = {}
 f = open(dir_embedding,"r",encoding='utf-8')
 line = f.readline()
