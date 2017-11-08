@@ -1,3 +1,4 @@
+# coding:utf-8
 import json
 import torch.optim as optim
 import numpy as np
