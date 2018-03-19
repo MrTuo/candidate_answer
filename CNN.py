@@ -53,7 +53,7 @@ while line:
         log('loading embedding error!\n'+content)
         break
 log("finish loading")
-
+f.close()
 
 ##################### 创建一个CNN\
 
@@ -133,6 +133,7 @@ def get_sentence_embedding(s,out_size):
 optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 f = open(dir_train,'r',encoding='utf-8')
 data = json.loads(f.read()) # 8768 quesions(except 4 questions which don't have the right answer)
+f.close()
 count_step = 0
 for epoch in range(2):  # loop over the dataset multiple times
     f = open(dir_train)
@@ -177,12 +178,11 @@ for epoch in range(2):  # loop over the dataset multiple times
 log('Finished Training')
 
 
-
 #################### test
 log('start test...')
 f = open(dir_test,'r',encoding='utf-8')
 test_data = json.loads(f.read())
-
+f.close()
 MRR = 0
 count_right_answer = 0
 for id in test_data:
